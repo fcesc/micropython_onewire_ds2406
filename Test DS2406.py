@@ -3,12 +3,9 @@ from machine import Pin, Timer
 import onewire
 
 
-
 ONE_WIRE_PIN = 21
-
 p_ow = Pin(ONE_WIRE_PIN, Pin.OUT)
 ow = onewire.OneWire(p_ow)
-
 
 
 # Change the PIO_A output state.
@@ -39,9 +36,7 @@ def change_state_loop(t):
     b = not b
 
 
-
 #######################################
-    
 
 ow.reset()
 
