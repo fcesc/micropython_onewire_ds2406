@@ -14,12 +14,12 @@ def setPIO_A( dev, on ):
     ow.writebyte(0x55)
     ow.writebyte(0x07)
     ow.writebyte(0)
-    
+    # 0x1F: GPIO_A -> Transistor On
+    # 0x3F: GPIO_A -> Transistor Off
     if on:
         ow.writebyte(0x1F)
     else:
         ow.writebyte(0x3F)
-    
     ow.readbyte()
     ow.readbyte()
 
